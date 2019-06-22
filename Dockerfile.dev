@@ -1,8 +1,11 @@
 FROM openjdk:8-jre-alpine3.8
+
 RUN addgroup -S stocklogger && adduser -S -G stocklogger stocklogger
 USER stocklogger
 WORKDIR /home/stocklogger
+
 ENTRYPOINT ["java","-jar", "-agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n","/home/stocklogger/stocklogger-1.0.0-SNAPSHOT.jar"]
+
+EXPOSE 80
 EXPOSE 443
 EXPOSE 8787
-EXPOSE 8080
