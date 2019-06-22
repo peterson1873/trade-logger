@@ -5,5 +5,3 @@ services:
 before_install:
   - docker build -t peterson1873/stock-logger .
 
-script:
-  - docker run peterson1873/stock-logger
