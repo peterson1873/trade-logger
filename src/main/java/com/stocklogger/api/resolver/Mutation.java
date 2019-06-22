@@ -32,15 +32,21 @@ public class Mutation implements GraphQLMutationResolver
 
     public Book newBook(String title, String isbn, Integer pageCount, Long authorId)
     {
-        Book book = new Book();
-        book.setAuthor(new Author(authorId));
-        book.setTitle(title);
-        book.setIsbn(isbn);
-        book.setPageCount(pageCount != null ? pageCount : 0);
+        Optional<Author> author = authorRepository.findById(authorId);
+        if (author.isPresent())
+        {
+            Book book = new Book();
+            book.setAuthor(new Author(authorId));
+            book.setTitle(title);
+            book.setIsbn(isbn);
+            book.setPageCount(pageCount != null ? pageCount : 0);
 
-        bookRepository.save(book);
+            bookRepository.save(book);
 
-        return book;
+            return book;
+        }
+
+        return null;
     }
 
     public boolean deleteBook(Long id)

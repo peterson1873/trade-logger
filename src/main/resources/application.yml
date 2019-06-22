@@ -2,3 +2,17 @@ graphiql:
   mapping: /graphiql
   endpoint: /graphql
   enabled: true
+spring:
+  datasource:
+    url: "jdbc:h2:file:/home/stocklogger/stocklogger"
+    username: "sa"
+    password: "password"
+    driverClassName: "org.h2.Driver"
+  jpa:
+    database-platform: "org.hibernate.dialect.H2Dialect"
+  h2:
+    console:
+      settings:
+        trace: false,
+        web-allow-others: false
+
