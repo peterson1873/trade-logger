@@ -7,7 +7,7 @@ RUN mvn package
 
 
 FROM openjdk:8-jre-alpine3.8
-EXPOSE 80
+EXPOSE 8080
 
 RUN addgroup -S stocklogger && adduser -S -G stocklogger stocklogger
 USER stocklogger
