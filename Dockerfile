@@ -7,6 +7,7 @@ RUN mvn package
 
 
 FROM openjdk:8-jre-alpine3.8
+EXPOSE 80
 
 RUN addgroup -S stocklogger && adduser -S -G stocklogger stocklogger
 USER stocklogger
@@ -16,4 +17,3 @@ COPY --from=MAVEN_TOOL_CHAIN /tmp/target/stocklogger*.jar /home/stocklogger
 WORKDIR /home/stocklogger
 
 ENTRYPOINT ["java","-jar", "/home/stocklogger/stocklogger-1.0.0-SNAPSHOT.jar"]
-EXPOSE 80
