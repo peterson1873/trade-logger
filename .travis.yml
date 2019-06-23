@@ -5,4 +5,16 @@ services:
 script:
   - docker build -t peterson1873/stock-logger .
 
-
+deploy:
+  provider: elasticbeanstalk
+  region: "us-west-2"
+  app: "stock-logger"
+  env: "StockLogger-env"
+  bucket_name: "elasticbeanstalk-us-west-2-866521079721"
+  bucket_path: "stock-logger"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KET"
+    
