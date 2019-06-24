@@ -5,9 +5,9 @@ services:
       context: .
       dockerfile: Dockerfile.dev
     ports:
-      - "8443:8443"
-      - "8080:8080"
+      - "443:443"
+      - "80:80"
       - "8787:8787"
     volumes:
-      - ./target:/home/stocklogger
+      - ./target:/usr/app
 

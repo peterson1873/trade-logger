@@ -12,9 +12,9 @@ $ mvn clean install
 $ docker build . 
 
 # Use the container id to run
-$ docker run -p 80:8080 <id> 
+$ docker run -p 80:80 <id> 
 
 # Building and running with a tag
 docker build -t peterson1873/stock-logger .
-docker run -p 80:8080 peterson1873/stock-logger
+docker run -p 80:80 peterson1873/stock-logger
 

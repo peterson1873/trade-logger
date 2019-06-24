@@ -1,12 +1,12 @@
 server:
-  port : 8080
+  port : 80
 graphiql:
   mapping: /graphiql
   endpoint: /graphql
   enabled: true
 spring:
   datasource:
-    url: "jdbc:h2:file:/home/stocklogger/stocklogger"
+    url: "jdbc:h2:file:/usr/app/stocklogger"
     username: "sa"
     password: "password"
     driverClassName: "org.h2.Driver"

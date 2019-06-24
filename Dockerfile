@@ -7,13 +7,11 @@ RUN mvn package
 
 
 FROM openjdk:8-jre-alpine3.8
-EXPOSE 8080
+EXPOSE 80
+RUN apk update;
 
-RUN addgroup -S stocklogger && adduser -S -G stocklogger stocklogger
-USER stocklogger
+WORKDIR /usr/app
 
-COPY --from=MAVEN_TOOL_CHAIN /tmp/target/stocklogger*.jar /home/stocklogger
+COPY --from=MAVEN_TOOL_CHAIN /tmp/target/stocklogger*.jar /usr/app
 
-WORKDIR /home/stocklogger
-
-ENTRYPOINT ["java","-jar", "/home/stocklogger/stocklogger-1.0.0-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","/usr/app/stocklogger-1.0.0-SNAPSHOT.jar"]
