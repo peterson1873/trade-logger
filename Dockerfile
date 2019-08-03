@@ -12,6 +12,6 @@ RUN apk update;
 
 WORKDIR /usr/app
 
-COPY --from=MAVEN_TOOL_CHAIN /tmp/target/stocklogger*.jar /usr/app
+COPY --from=MAVEN_TOOL_CHAIN /tmp/target/tradelogger*.jar /usr/app
 
-ENTRYPOINT ["java","-jar","/usr/app/stocklogger-1.0.0-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","/usr/app/tradelogger-1.0.0-SNAPSHOT.jar"]

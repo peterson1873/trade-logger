@@ -1,10 +1,10 @@
-package com.stocklogger.api.resolver;
+package com.tradelogger.api.resolver;
 
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
-import com.stocklogger.api.model.Author;
-import com.stocklogger.api.model.Book;
-import com.stocklogger.api.repository.AuthorRepository;
-import com.stocklogger.api.repository.BookRepository;
+import com.tradelogger.api.model.Author;
+import com.tradelogger.api.model.Book;
+import com.tradelogger.api.repository.AuthorRepository;
+import com.tradelogger.api.repository.BookRepository;
 
 public class Query implements GraphQLQueryResolver
 {

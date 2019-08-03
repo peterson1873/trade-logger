@@ -1,15 +1,15 @@
-package com.stocklogger.api.configuration;
+package com.tradelogger.api.configuration;
 
-import com.stocklogger.api.repository.AuthorRepository;
-import com.stocklogger.api.repository.BookRepository;
-import com.stocklogger.api.resolver.BookResolver;
-import com.stocklogger.api.resolver.Mutation;
-import com.stocklogger.api.resolver.Query;
+import com.tradelogger.api.repository.AuthorRepository;
+import com.tradelogger.api.repository.BookRepository;
+import com.tradelogger.api.resolver.BookResolver;
+import com.tradelogger.api.resolver.Mutation;
+import com.tradelogger.api.resolver.Query;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class StockLoggerConfiguration
+public class TradeLoggerConfiguration
 {
     @Bean
     public BookResolver authorResolver(AuthorRepository authorRepository)

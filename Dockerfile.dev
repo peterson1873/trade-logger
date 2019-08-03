@@ -7,4 +7,4 @@ RUN apk update
 
 WORKDIR /usr/app
 
-ENTRYPOINT ["java","-jar", "-agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n","/usr/app/stocklogger-1.0.0-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar", "-agentlib:jdwp=transport=dt_socket,address=8787,server=y,suspend=n","/usr/app/tradelogger-1.0.0-SNAPSHOT.jar"]

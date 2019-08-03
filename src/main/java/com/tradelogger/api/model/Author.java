@@ -1,4 +1,4 @@
-package com.stocklogger.api.model;
+package com.tradelogger.api.model;
 
 import javax.persistence.*;
 

@@ -6,7 +6,7 @@ graphiql:
   enabled: true
 spring:
   datasource:
-    url: "jdbc:h2:file:/usr/app/stocklogger"
+    url: "jdbc:h2:file:/usr/app/tradelogger"
     username: "sa"
     password: "password"
     driverClassName: "org.h2.Driver"
