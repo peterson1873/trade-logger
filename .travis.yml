@@ -7,6 +7,6 @@ script:
 
 deploy:
   provider: script
-  script: docker login -u $DOCKER_USERNAME --password-stdin $DOCKER_PASSWORD && make push-image
+  script: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD && make push-image
   on:
     branch: master
