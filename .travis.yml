@@ -6,14 +6,7 @@ script:
   - docker build -t peterson1873/trade-logger .
 
 deploy:
-  provider: elasticbeanstalk
-  region: "us-west-2"
-  app: "trade-logger"
-  env: "TradeLogger-env"
-  bucket_name: "elasticbeanstalk-us-west-2-866521079721"
-  bucket_path: "trade-logger"
+  provider: script
+  script: docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD && make push-image
   on:
     branch: master
-  access_key_id: $AWS_ACCESS_KEY
-  secret_access_key:
-    secure: "$AWS_SECRET_KEY"
