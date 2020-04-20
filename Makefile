@@ -6,11 +6,10 @@ test:
 
 image:
 	docker build -t ${IMAGE}:${VERSION} .
-	docker tag ${IMAGE}:${VERSION} ${IMAGE}:latest
+	docker tag ${IMAGE}:${VERSION} ${IMAGE}:${VERSION}
 
 push-image:
 	docker push ${IMAGE}:${VERSION}
-	docker push ${IMAGE}:latest
 
 
 .PHONY: image push-image test

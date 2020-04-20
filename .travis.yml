@@ -3,7 +3,7 @@ services:
   - docker
 
 script:
-  - docker build -t peterson1873/trade-logger .
+  - docker build -t peterson1873/trade-logger:1.0.0 .
 
 deploy:
   provider: script
