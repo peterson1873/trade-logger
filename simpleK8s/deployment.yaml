@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata:
+  name: webapp-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels: 
+      component: web
+  template:
+    metadata:
+      labels:
+        component: web
+    spec:
+      containers:
+        - name: private-reg-container
+          image: docker.io/peterson1873/trade-logger:1.0.0
+          ports:
+            - containerPort: 80
+      imagePullSecrets:
+        - name: regcred
+
