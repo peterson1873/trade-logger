@@ -17,4 +17,10 @@ spring:
       settings:
         trace: false,
         web-allow-others: false
+management:
+  endpoints:
+    enabled-by-default: false
+  endpoint:
+    info:
+      enabled: true
 
