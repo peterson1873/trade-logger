@@ -17,6 +17,7 @@ spec:
           image: docker.io/peterson1873/trade-logger:1.0.0
           ports:
             - containerPort: 80
+          imagePullPolicy: Always
       imagePullSecrets:
         - name: regcred
 
