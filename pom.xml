@@ -30,7 +30,7 @@
         <spring.orm.version>5.1.3.RELEASE</spring.orm.version>
         <h2.version>1.4.200</h2.version>
         <springboot.graphql.version>5.0.2</springboot.graphql.version>
-        <java.graphql.version>12.0</java.graphql.version>
+        <java.graphql.version>17.4</java.graphql.version>
         <java.graphql.tools.version>5.2.4</java.graphql.tools.version>
 
     </properties>
